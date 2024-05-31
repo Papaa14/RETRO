@@ -1,3 +1,4 @@
+<?php include('admin_check.php');?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +8,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>RETRO INK TATTOO</title>
-  <link href="Images\LOGO.png" rel="icon">
-  <link href="Images\LOGO.png" rel="icon">
+  
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,10 +23,9 @@
 </head>
 
 <body>
-
-  <?php include('sidebar.php');?>
+  
   <main id="main" class="main">
-
+    <?php include('sidebar.php');?>
     <div class="pagetitle">
       <h1>Dashboard</h1>
       <nav></nav>
@@ -112,7 +111,7 @@
   </main>
   <footer id="footer" class="footer">
     <div class="copyright">
-      <div class="credit"> ©2024 Rettro Ink. All Right Reserved. Developed by calvinmangi627@gmail.com </div>
+      <div class="credit"> ©2024 Retro Ink. All Right Reserved. Developed by calvinmangi627@gmail.com </div>
     </div>
      
   </footer>

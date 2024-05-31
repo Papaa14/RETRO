@@ -13,10 +13,11 @@ $con=mysqli_connect($dbhost,$dbusername,$dbpassword,$dbname);
 
 $username = $_POST['username'];
 $password=$_POST['password'];
+$type='user';
 $hash=password_hash($password, PASSWORD_DEFAULT);
 
 
-$sql="INSERT INTO users(username,password)VALUES('$username','$hash')";
+$sql="INSERT INTO users(username,password,type)VALUES('$username','$hash','$type')";
 
 
 $rs = mysqli_query($con ,$sql);

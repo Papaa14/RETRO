@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@media (max-width: 768px) {
+   .sidebar {
+     left: -300px;
+   }
+ }  
+ 
+ @media (min-width: 796px) {
+   .sidebar {
+     left: -300px;
+   }
+ }
 
 *{
    font-family: 'Poppins', sans-serif;
@@ -108,6 +119,7 @@
    font-size: 20px;
    cursor: pointer;
 }
+
 
 .form-container form .form-btn:hover{
    background: crimson;

@@ -26,7 +26,7 @@ include 'connection.php';
 	  <input type="text" name="username" required placeholder="enter your username">      
       <input type="password" name="password" required placeholder="enter your password" >
       <input type="submit" name="login" value="login" class="form-btn"  >
-      <p>don't have an account? <a href="signup.php">register now</a></p>
+      <p>don't have an account? <a href="index.php">register now</a></p>
    </form>
 
 </div>
@@ -46,6 +46,7 @@ if (mysqli_num_rows($rs)>0) {
          $username= $row['username'];
          session_start();
          $_SESSION['username']=$row['username'];
+         $_SESSION['type']=$row['type'];
          header("location:home.php");
       }else {
         echo  "<script type= 'text/javascript'>";

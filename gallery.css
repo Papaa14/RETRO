@@ -12,6 +12,19 @@
 body{
   background: rgb(233, 233, 233);
 }
+@media (max-width: 768px) {
+  .sidebar {
+    left: -300px;
+  }
+}  
+
+@media (min-width: 796px) {
+  .sidebar {
+    left: -300px;
+  }
+}
+.mobile-display-on{display:none;}
+.mobile-display-off{display: block;}
 .container{
   display: flex;
   width: 1200px;

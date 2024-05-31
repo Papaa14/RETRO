@@ -16,6 +16,8 @@ body{
     padding: 50px 20px;
     border-radius: 7px;
     box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 10px;
 }
 input[type="file"]{
     display: none;
@@ -56,4 +58,37 @@ figcaption{
     text-align: center;
     font-size: 2.4vmin;
     margin-top: 0.5vmin;
+}
+#button{
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+}
+.submit-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s ,color0.3s;
+
+  }
+.submit-btn:hover{
+    background: color #0056b3;
+    border-color: #0056b3;
+}
+.right-align {
+    display: flex;
+    justify-content: flex-end;
+}
+.signout{
+    float: right;
+}
+.navbar{
+    float: right;
 }

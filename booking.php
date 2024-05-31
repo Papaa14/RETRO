@@ -36,7 +36,7 @@ if(isset($_POST["submit"])){
 <!DOCTYPE html>
 <html>
 <head>
-
+    <title>Bookings</title>
     <link rel="stylesheet" href="book.css">  
 </head>    
 <body>

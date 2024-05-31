@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>RETRO INK</title>
+  <title>Bookings</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,7 +32,7 @@
 
 <body>
 
- <?php include('sidebar.php');?>
+  <?php include('sidebar.php'); ?>
 
   <main id="main" class="main">
 
@@ -51,7 +50,7 @@
     <section class="section">
       <div class="row">
         <div class="col-lg-12">
-              
+
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Tattoo Bookings</h5>
@@ -59,68 +58,79 @@
               <table class="table table-hover">
                 <thead>
                   <tr>
+                    <th scope="col">Id</th>
                     <th scope="col">Username</th>
                     <th scope="col">Description</th>
                     <th scope="col">Image</th>
                     <th scope="col">Date</th>
-                    
+                    <th scope="col">Operation</th>
+
                   </tr>
                 </thead>
                 <tbody>
-                  
-<?php
 
-$con = mysqli_connect('localhost', 'root', '', 'rettro');
+                  <?php
+                  $dbhost = "localhost";
+                  $dbuser = "root";
+                  $dbpass = "";
+                  $dbname = "rettro";
 
-if (!$con) {
-    
-    echo "Something went wrong with database connection";
-}
+                  $con = mysqli_connect("localhost", "root", "", "rettro");
 
-$sql = "SELECT username,description,image,date FROM book";
-$result = mysqli_query($con, $sql);
 
-if (mysqli_num_rows($result) > 0) {
-    
-    while ($rows = mysqli_fetch_assoc($result)) {
-        
-        ?>
-                    <tr>
-                    <td><?php echo $rows['username'];?></td>
-                    <td><?php echo $rows['description'];?></td>                    
-                    <td><?php echo $rows['image'];?></td>
-                    <td><?php echo $rows['date'];?></td>
-                    <td><a href="show.php"><input type="submit" name="view" value="view" class="btn"                    
-                    style="margin-top:10px; height: 35px; width: 75px;"></a></td>
-                  </tr>
-</div>
+                  if (!$con) {
 
-<?php
+                    echo "Something went wrong with database connection";
+                  }
 
-    }
-}
+                  $sql = "SELECT id,username,description,image,date FROM book";
+                  $result = mysqli_query($con, $sql);
 
-?>   
-                </tbody>
-              </table>
-            
+                  if (mysqli_num_rows($result) > 0) {
 
+                    while ($rows = mysqli_fetch_assoc($result)) {
+
+                  ?>
+                      <tr>
+                        <td><?php echo $rows['id']; ?></td>
+                        <td><?php echo $rows['username']; ?></td>
+                        <td><?php echo $rows['description']; ?></td>
+                        <td><?php echo '<img src="../image/' . $rows['image'] . '" alt="images" height=100px width=100px>'; ?></td>
+                        <td><?php echo $rows['date']; ?></td>
+                        <td><a href=<?php echo "delete1.php?id=".$rows["id"] ?>>Delete Record</a></td>                       
+                       
+                        
+
+                      </tr>
             </div>
-          </div>
 
-          
+        <?php
+
+                    }
+                  }
+
+        ?>
+        </tbody>
+        </table>
+
+
+          </div>
         </div>
+
+
       </div>
-</section>
+      </div>
+
+    </section>
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-    <div class="credit"> ©2024 Retro Ink. All Right Reserved. Developed by calvinmangi627@gmail.com  </div>
+      <div class="credit"> ©2024 Retro Ink. All Right Reserved. Developed by calvinmangi627@gmail.com </div>
     </div>
-     
+
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -139,4 +149,3 @@ if (mysqli_num_rows($result) > 0) {
   <script src="assets/js/main.js"></script>
 
 </body>
-

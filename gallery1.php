@@ -67,6 +67,11 @@
                 <span class="nav-item">Uploads</span>
               </a>
             </li>
+            <li><a href="home.php">
+                <i class="fas fa-hand-o-left"></i>
+                <span class="nav-item">Go back</span>
+              </a>
+            </li>
 
           </ul>
         </div>
@@ -437,10 +442,10 @@
                   </li>
                   <li>
                     <div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 19 -->
-                      <img src="images/gallery-two-img19.jpg" class="gallery-two-image img-responsive" alt="" />
+                      <img src="images/gallery-two-img19.jpeg" class="gallery-two-image img-responsive" alt="" />
                       <div class="b-wrapper">
                         <div class="b-animate b-from-left b-delay03 ">
-                          <a href="images/photo-gallery/image-19.jpg" rel="prettyPhoto[pp_gal]">
+                          <a href="images/photo-gallery/image-19.jpeg" rel="prettyPhoto[pp_gal]">
                             <button class="zooming md-trigger">
                               <img src="images/zoom.png" alt="" />
                             </button>

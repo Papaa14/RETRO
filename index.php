@@ -21,14 +21,7 @@
 <div class="form-container">
 
    <form action="connect.php" method="post">
-      <h3>register now</h3>
-      <?php
-      if(isset($error)){
-         foreach($error as $error){
-            echo '<span class="error-msg">'.$error.'</span>';
-         };
-      };
-      ?>
+      <h3>register now</h3>     
       <input type="text" name="username" required placeholder="enter your username">      
       <input type="password" name="password" required placeholder="enter your password">
       <input type="submit" name="submit" value="register now" class="form-btn">

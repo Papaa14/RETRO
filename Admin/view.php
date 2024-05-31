@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>RETTRO INK </title>
+  <title>Members</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -60,21 +60,26 @@
                 <thead>
                   <tr>
                     <th scope="col">Username</th>
-                    <th scope="col">Password</th>
+                    <th scope="col">Type</th>
                   </tr>
                 </thead>
                 <tbody>
                   
 <?php
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "rettro";
 
-$con = mysqli_connect('localhost', 'root', '', 'rettro');
+$con = mysqli_connect("localhost","root","","rettro");
+
 
 if (!$con) {
     
     echo "Something went wrong with database connection";
 }
 
-$sql = "SELECT username,password FROM users";
+$sql = "SELECT username,type FROM users";
 $result = mysqli_query($con, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -84,7 +89,7 @@ if (mysqli_num_rows($result) > 0) {
         ?>
                    
                 <td><?php echo $rows['username'];?></td>
-                <td><?php echo $rows['password'];?></td>
+                <td><?php echo $rows['type'];?></td>
                   </tr>
 </div>
 
