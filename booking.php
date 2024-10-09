@@ -53,7 +53,10 @@ if(isset($_POST["submit"])){
                     </div>
                     <div class="inputBox">
                         <span>description:</span>
-                        <input type="text" name="description" placeholder="type of tattoo" class="input">
+                        <select id="options" name="options">
+                            <option value="1">Tatoo</option>
+                            <option value="2">Piercing</option>                            
+                        </select>
                     </div>
                     <div class="inputBox">
                         <span>Image:</span>
