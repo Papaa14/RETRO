@@ -70,12 +70,7 @@
                 <tbody>
 
                   <?php
-                  $dbhost = "localhost";
-                  $dbuser = "root";
-                  $dbpass = "";
-                  $dbname = "rettro";
-
-                  $con = mysqli_connect("localhost", "root", "", "rettro");
+                  require "admin_connect.php";
 
 
                   if (!$con) {

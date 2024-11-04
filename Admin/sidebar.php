@@ -1,11 +1,11 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <div class="d-flex align-items-center justify-content-between">
     <a href="dashboard.php" class="logo d-flex align-items-center">
       <span class="d-none d-lg-block">RETRO INK</span>
     </a>
-    <i class="bi bi-list toggle-sidebar-btn"></i>
+    <i class="bi bi-list toggle-sidebar-btn"> </i>
   </div>
   
   <nav class="navbar">

@@ -1,14 +1,7 @@
 <?php
 if(isset($_POST['submit'])){
 
-$dbhost="localhost";
-$dbusername="root";
-$dbpassword="";
-$dbname="rettro";
-
-
-
-$con=mysqli_connect($dbhost,$dbusername,$dbpassword,$dbname);
+require 'connection.php';
 
 
 $username = $_POST['username'];

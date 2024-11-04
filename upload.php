@@ -1,10 +1,7 @@
 <?php
 if(isset($_POST['submit'])){
 
-$dbhost="localhost";
-$dbusername="root";
-$dbpassword="";
-$dbname="rettro";
+require 'connection.php';
 
 
 

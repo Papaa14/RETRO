@@ -6,13 +6,7 @@ if (isset($_GET['id'])) {
    
     
     // Database connection parameters
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "rettro";
-
-    // Create connection
-    $con = mysqli_connect("localhost", "root", "", "rettro");
+     require "admin_connect.php";
 
     // Check connection
     if ($con->connect_error) {

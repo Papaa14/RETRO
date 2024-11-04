@@ -1,13 +1,13 @@
 <?php
 
-
 $dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
+$dbuser = "Alpha";
+$dbpass = "Alpha@01";
 $dbname = "rettro";
 
-$con = mysqli_connect("localhost","root","","rettro");
+$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
 
   
 
+  ?>

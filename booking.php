@@ -1,17 +1,18 @@
 <?php
+require 'connection.php';
 
 if(isset($_POST["submit"])){
     $username = $_POST['username'];
     $description=$_POST['description'];
     $date=$_POST['date'];
-    $target_Folder = "image/"; // Folder to save uploaded images
+   // Folder to save uploaded images
     $file_name = $_FILES['image']['name'];
     
     if (file_exists('image/' . $file_name)) {
         echo "That file already exists.";
     } else {
         // Database connection
-        $con = mysqli_connect("localhost", "root", "", "rettro");
+        $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
         if (mysqli_connect_errno()) {
             echo "Failed to connect to the database: " . mysqli_connect_error();
         }
@@ -53,9 +54,9 @@ if(isset($_POST["submit"])){
                     </div>
                     <div class="inputBox">
                         <span>description:</span>
-                        <select id="options" name="options">
-                            <option value="1">Tatoo</option>
-                            <option value="2">Piercing</option>                            
+                        <select id="options" name="description">
+                            <option value="Tatto">Tatoo</option>
+                            <option value="Piercing">Piercing</option>                            
                         </select>
                     </div>
                     <div class="inputBox">

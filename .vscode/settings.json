@@ -1,3 +1,31 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "Alpha",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Retrro",
+            "database": "rettro",
+            "username": "Alpha"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "rettro",
+            "username": "Alpha",
+            "name": "Retro"
+        }
+    ]
 }
